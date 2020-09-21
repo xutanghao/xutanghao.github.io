@@ -1,0 +1,172 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+#title: Simple Blog Theme
+#title: Xutanghao Blog
+title: Home
+#email: your-email@example.com
+email: xutanghao@126.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/myblog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+#url: "https://lorepirri.gitlab.io" # change this to the base hostname & protocol for your site
+#twitter_username: jekyllrb
+#github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+# Make sure to exclude 'vendor' from the build
+exclude: [vendor, "Gemfile", "Gemfile.lock"]
+
+# permalink: /:categories/:year/:month/:day/:title.html
+# none is equivalent to /:title.html
+# https://jekyllrb.com/docs/permalinks
+permalink: /:title.html
+
+# myblog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+myblog:
+  date_format: "%b %-d, %Y"
+theme: # leave it empty
+#header_page_refs: ['articles','projects','archive','about']
+#header_page_refs: ['projects','archive','categorys','about']
+header_page_refs: ['archive','categorys','about']
+plugins:
+  - jekyll-target-blank
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+target-blank:
+    rel: nofollow
+
+show_post_image_posts_list: false
+
+header:
+  image: /assets/patterns/symphony.png
+
+# social
+author:
+  name: "Xu Tanghao"
+  short_bio:
+    en: Being a life-long learning is key to future success. Always be investing time in new skills and capabilities.
+
+    it: Jekyll Blog Theme, Responsive
+  picture: assets/img/xutanghao-header.png
+  #picture: assets/img/profile-60.png
+image: /assets/img/profile-225.png
+
+
+#twitter:
+#  username:
+#instagram_username:
+
+#linkedin_username: hereyourlinkedin-id-only
+
+
+
+# github on site
+github:
+  owner_url: https://github.com/xutanghao
+
+# gitlab on site
+#gitlab:
+  #owner_url: https://gitlab.com/lorepirri
+  
+
+
+# translation
+
+t:
+  en:
+    latest-posts:  "Latest Posts"
+    read-more:  "Read More →"
+    show-more:  "Show More →"
+    loading:  "Loading..."
+    on-word: "on"
+    contact: "Contact"
+    contact-page: "contact.md"
+    read-time: "min read"
+    comments: "comments"
+    go-to-home-page: "Go to the Home Page"
+    months:
+      january: "Jan"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "May"
+      june: "Jun"
+      july: "Jul"
+      august: "Aug"
+      september: "Sep"
+      october: "Oct"
+      november: "Nov"
+      december : "Dec"
+  it:
+    latest-posts:  "Ultimi Posts"
+    read-more:  "Leggi →"
+    show-more:  "Mostra →"
+    loading:  "Caricamento..."
+    on-word: "su"
+    contact: "Contatta"
+    contact-page: "contatta.md"
+    read-time: "min di lettura"
+    comments: "commenti"
+    go-to-home-page: "Vai alla Pagina Iniziale"
+    months:
+      january: "Gen"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "Mag"
+      june: "Giu"
+      july: "Lug"
+      august: "Ago"
+      september: "Set"
+      october: "Ott"
+      november: "Nov"
+      december : "Dic"
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      lang: "en"
